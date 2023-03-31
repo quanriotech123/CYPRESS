@@ -1,2 +1,5 @@
-# dependencies
+
+
+.gitignore
+
 /node_modules
