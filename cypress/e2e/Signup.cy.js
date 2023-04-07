@@ -26,7 +26,7 @@ it('Create an account with a previously used email',()=>{
   })
 })
 ////////////////////////////////////////////////////////////////////////////////////////
-it.only('Click on the  cross icon to close the sign-up screen',()=>{
+it('Click on the  cross icon to close the sign-up screen',()=>{
   cy.visit('http://blockchainmarketplace.quanrio.com/')
   cy.get('.signUpBtnTxt').click()
   cy.get('.p-0 > a').click()
@@ -34,5 +34,13 @@ it.only('Click on the  cross icon to close the sign-up screen',()=>{
   cy.log('Test Pass')
 })
 ////////////////////////////////////////////////////////
-
+it.only('Click on the  cross icon to close the sign-up screen',()=>{
+  cy.visit('http://blockchainmarketplace.quanrio.com/')
+  cy.get('.signUpBtnTxt').click()
+  cy.get(':nth-child(1) > .form-control').type('shahjihan524@gmail.com')
+  cy.get(':nth-child(2) > .form-control').type('abc')
+  cy.get(':nth-child(2) > .btn').click()
+  cy.findByText('Post New Request').should('be.visible')
+ 
+})
 })

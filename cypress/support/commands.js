@@ -22,6 +22,7 @@
 //
 //
 // -- This will overwrite an existing command --
+import '@testing-library/cypress/add-commands'
 Cypress.Commands.add('createaccount', () => { 
    cy.visit('http://blockchainmarketplace.quanrio.com/')
    cy.get('.signUpBtnTxt').click()
